@@ -14,6 +14,7 @@ class UserCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       padding: const EdgeInsets.symmetric(vertical: 4),
       decoration: BoxDecoration(
+        color: Colors.blueGrey.shade300,
         borderRadius: BorderRadius.circular(10),
       ),
       child: ListTile(
@@ -27,6 +28,7 @@ class UserCard extends StatelessWidget {
           ],
         ),
         leading: CircleAvatar(
+          radius: 25,
           child: Text(user.name[0]),
         ),
       ),
