@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:futter_architecture_cubit/user_list_cubit.dart';
+import 'package:futter_architecture_cubit/ui/user_cubit/user_cubit.dart';
+import 'package:futter_architecture_cubit/ui/user_cubit/user_state.dart';
 import 'package:futter_architecture_cubit/widgets/user_card.dart';
 
-import 'package:futter_architecture_cubit/user_list_state.dart';
 
 class UserListPage extends StatefulWidget {
   const UserListPage({super.key});
@@ -22,9 +21,9 @@ class _UserListPageState extends State<UserListPage> {
       ),
       body: Center(
         child: BlocBuilder(
-            bloc: BlocProvider.of<UserListCubit>(context),
+            bloc: BlocProvider.of<UsersCubit>(context),
             builder: (context, state) {
-              final userState = state as UserListState;
+              final userState = state as UsersState;
               return userState.isLoading
                   ? const CircularProgressIndicator()
                   : ListView(

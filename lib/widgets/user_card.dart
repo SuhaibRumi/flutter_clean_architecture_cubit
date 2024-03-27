@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:futter_architecture_cubit/data/user_json.dart';
 
-import '../user_json.dart';
+
+
 
 class UserCard extends StatelessWidget {
-  final UserJson user;
+  final User user;
 
   const UserCard({super.key, required this.user});
 
@@ -24,7 +25,7 @@ class UserCard extends StatelessWidget {
           children: [
             Text(user.email),
             Text(user.phone),
-            Text(user.userName),
+            Text(user.name),
           ],
         ),
         leading: CircleAvatar(
