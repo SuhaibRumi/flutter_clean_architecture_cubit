@@ -1,6 +1,5 @@
 
-
-import 'package:futter_architecture_cubit/data/user_json.dart';
+import 'package:futter_architecture_cubit/domain/entities/user.dart';
 import 'package:futter_architecture_cubit/domain/repositories/user_repository.dart';
 
 class MockUsersRepository implements UsersRepository {
